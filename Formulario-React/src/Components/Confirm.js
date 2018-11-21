@@ -15,6 +15,12 @@ export default class FormUserDetails extends Component {
         e.preventDefault();
         this.props.passoAnterior();
     }
+    handleKeyPress = e =>{
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        this.props.proximoPasso();
+    }
+  }
   render() {
       const { values: { primeiroNome,sobrenome,email,occupation,cidade,bio} } = this.props;
     return (

@@ -9,6 +9,12 @@ export default class FormUserDetails extends Component {
         e.preventDefault();
         this.props.proximoPasso();
     }
+    handleKeyPress = e =>{
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        this.props.proximoPasso();
+    }
+  }
   render() {
       const { values,handleChange } = this.props;
     return (
@@ -34,6 +40,7 @@ export default class FormUserDetails extends Component {
             floatingLabelText="e-mail"
             onChange={handleChange('email')}
             defaultValue={values.email}
+            onKeyDown={this.handleKeyPress}
             />
             <br/>
             <RaisedButton 

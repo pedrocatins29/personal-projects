@@ -13,6 +13,12 @@ export default class FormPersonalDetails extends Component {
         e.preventDefault();
         this.props.passoAnterior();
     }
+    handleKeyPress = e =>{
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        this.props.proximoPasso();
+    }
+  }
 
   render() {
       const { values,handleChange } = this.props;
@@ -39,6 +45,7 @@ export default class FormPersonalDetails extends Component {
             floatingLabelText="Bio"
             onChange={handleChange('bio')}
             defaultValue={values.bio}
+            onKeyDown={this.handleKeyPress}
             />
             <br/>
             <RaisedButton 
