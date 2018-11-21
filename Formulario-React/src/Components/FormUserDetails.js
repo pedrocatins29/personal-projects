@@ -5,10 +5,12 @@ import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 
 export default class FormUserDetails extends Component {
+  //função para continuar para proxima passo, que é chamada dentro do onClick
     continue = e =>{
         e.preventDefault();
         this.props.proximoPasso();
     }
+  //função para continuar para proxima passo, que é chamada dentro do onKeyDown(enter)
     handleKeyPress = e =>{
       if (e.key === 'Enter') {
         e.preventDefault();
@@ -16,11 +18,12 @@ export default class FormUserDetails extends Component {
     }
   }
   render() {
+    //desestruturação e tirando os valores de dentro do state e jogando nas props
       const { values,handleChange } = this.props;
     return (
       <MuiThemeProvider>
         <React.Fragment>
-            <AppBar title="Dados de usuario" />
+            <AppBar title="Dados-de-usuario" />
             <TextField
             hintText="Digite seu nome"
             floatingLabelText="Nome"

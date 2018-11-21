@@ -24,6 +24,7 @@ export default class FormUserDetails extends Component {
   render() {
       const { values: { primeiroNome,sobrenome,email,occupation,cidade,bio} } = this.props;
     return (
+      //Mostrando todos os valores para o usuario confirmar
       <MuiThemeProvider>
         <React.Fragment>
             <AppBar title="Confirmar dados de usuario" />

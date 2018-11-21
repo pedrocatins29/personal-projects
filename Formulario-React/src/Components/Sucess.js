@@ -5,9 +5,10 @@ import AppBar from 'material-ui/AppBar'
 export default class Sucess extends Component {
     render() {
         return (
+            //apenas uma mensagem de sucesso
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Dados Enviados" />
+                    <AppBar title="Dados-Enviados" />
                     <h1>
                         Obrigado por sua contribuação
                     </h1>

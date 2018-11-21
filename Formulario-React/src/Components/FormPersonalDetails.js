@@ -9,6 +9,7 @@ export default class FormPersonalDetails extends Component {
         e.preventDefault();
         this.props.proximoPasso();
     }
+  //função para ir para passo anterior, que é chamada dentro do onClick
     back = e =>{
         e.preventDefault();
         this.props.passoAnterior();
