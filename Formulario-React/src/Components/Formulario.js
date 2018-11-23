@@ -45,13 +45,15 @@ render() {
   //switch para mudar o passo de acordo com o state
   //de acordo com o step, muda o passo que você está
   //caso você estiver em algum caso, é redirecionado para o component indicado
-  switch(step){
+  switch(step) {
     case 1:
       return(
-        <FormUserDetails 
+        <FormUserDetails
+        //enviando as funções para this.props para usar em outros components 
           proximoPasso = {this.proximoPasso}
           handleChange = {this.handleChange}
           values = {values}
+
         />
       )
       case 2:

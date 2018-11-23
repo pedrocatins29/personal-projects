@@ -52,6 +52,12 @@ export default class FormUserDetails extends Component {
             style={styles.button}
             onClick={this.continue}
             />
+            <RaisedButton 
+            label="Teste"
+            primary={false}
+            style={styles.button}
+            onClick={this.props.teste}
+            />
         </React.Fragment>
       </MuiThemeProvider>
     )
